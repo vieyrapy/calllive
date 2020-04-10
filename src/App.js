@@ -3,6 +3,7 @@ import './App.css';
 import { OTSession, OTStreams, preloadScript } from 'opentok-react';
 import ConnectionStatus from './components/ConnectionStatus';
 import Publisher from './components/Publisher';
+import PublisherCliente from './components/PublisherCliente';
 import Subscriber from './components/Subscriber';
 
 class App extends React.Component {
@@ -41,6 +42,8 @@ class App extends React.Component {
         <ConnectionStatus connected={this.state.connected} />
 
         <Publisher />
+
+        <PublisherCliente/>
 
         <OTStreams>
           <Subscriber />
