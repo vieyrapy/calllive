@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React from 'react';
 import './App.css';
 import { OTSession, OTStreams, preloadScript } from 'opentok-react';
@@ -29,6 +30,13 @@ class App extends React.Component {
 
   render() {
     return (
+      <Router>
+
+            <Route exact path="/components/Publisher" component={Publisher} />
+            <Route exact path="/components/PublisherCliente" component={PublisherCliente} />
+            <Route exact path="/components/Subscriber" component={Subscriber} />
+
+
       <OTSession
         apiKey={this.props.apiKey}
         sessionId={this.props.sessionId}
@@ -50,6 +58,8 @@ class App extends React.Component {
         </OTStreams>
 
       </OTSession>
+
+    </Router>
     );
   }
 }

@@ -37,7 +37,7 @@ class Publisher extends React.Component {
 
         {this.state.error ? <div id="error">{this.state.error}</div> : null}
 
-        //Caja de video
+        {/*Caja de video*/}
         <OTPublisher
           properties={{
             publishAudio: this.state.audio,
@@ -47,7 +47,7 @@ class Publisher extends React.Component {
           onError={this.onError}
         />
 
-//CheckBox de opciones compartir pantalla, mostrar audio, mostrar video
+{/*CheckBox de opciones compartir pantalla, mostrar audio, mostrar video*/}
         <CheckBox
           label="Share Screen"
           onChange={this.changeVideoSource}
